@@ -13,6 +13,3 @@
 </head>
 <body>
     <h1>GamerTool</h1>
-    <div class='container'></div>
-        <div class="row align-items-center">
-            <div class='col-10'></div>

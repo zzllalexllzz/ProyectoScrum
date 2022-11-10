@@ -1,8 +1,6 @@
 <?php
 
-    /**
-     * Crea una conexión nueva a BBDD
-     */
+    
     function conexionBD() {
         $dbh = null;
 
@@ -16,6 +14,20 @@
         return $dbh;
     }
 
+/*
+    function conexionBD() {
+        $dbh = null;
+
+        try {
+            //mariadb --> nombre del contenedor donde tengamos mysql
+            $dsn = "mysql:host=mariadb2;dbname=heroku";
+            $dbh = new PDO($dsn, "root", "toor");
+        } catch (PDOException $e){
+            echo $e->getMessage();
+        }
+
+        return $dbh;
+    }*/
     /**
      * Comprobar si el juego existe 
      */
@@ -51,13 +63,14 @@
         try {
             $stmt = $conexion->prepare("SELECT * FROM juegos");
             $stmt->execute();
-            $juegosE = $stmt->fetch(PDO::FETCH_ASSOC);
-            $id = $juegosE['id'];
+            $juegosE = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            //var_dump($juegosE);
+            //$id = $juegosE['id'];
         } catch (PDOException $ex) {
             echo $ex->getMessage();
         }
         $conexion = null; //Cerrar la conexión
-        return $id;
+        return $juegosE;
     }
 
     /**

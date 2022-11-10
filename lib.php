@@ -3,33 +3,33 @@
 
 
     function pintarJuegos($juegos) {
-        echo "<class='table table-striped'>";
+        echo "<table class='table'>";
             echo "<thead>";
                 echo "<tr>";
                     echo "<th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Plataforma</th>
                         <th>Genero</th>
-                        <th colspan='2'>Acciones</th>";
+                        <th>Acciones</th>";
                 echo "</tr>";
             echo "</thead>";
             echo "<tbody>";
-                foreach($juegos as $juego) {
-                    echo "<a href='./controlador.php?accion=localizacion&id=".$juego['id'].">";
-                    echo "<tr>";
-
-                        echo "<td>".$juego['nombre']."</td>
-                            <td>".$juego['descripcion']."</td>
-                            <td>".$juego['plataforma']."</td>
-                            <td>".$juego['genero']."</td>
-                            <td>
-                                <a href='./controlador.php?accion=eliminar&id=".$juego['id']."' class='btn btn-danger'>
-                                    Eliminar
-                                </a>
-                            </td>";
-                    echo "</tr>";
-                    echo "</a>";
+            
+           
+                forEach($juegos as $key => $value) {
+                    if ($key!="id") {
+                        echo "<tr>
+                        <td>" . $value["nombre"] . "</td>
+                        <td>" . $value["descripcion"] . "</td>
+                        <td>" . $value["plataforma"] . "</td>
+                        <td>" . $value["genero"] . "</td>
+                        </tr>";
+                    }
                 }
+            
+          
+                
+            
             echo "</tbody>";
         echo "</table>";
     }
