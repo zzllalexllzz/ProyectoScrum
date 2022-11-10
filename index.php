@@ -1,5 +1,13 @@
 <?php
-echo "hola mundo"; 
-echo "prueba";
-echo "probando";
+    include('lib.php');
+    include('cabecera.php');
+    include_once('modelo.php');
+    
+    $juegos = getJuegos();
+
+    pintarJuegos($juegos);
+
+
+
+    include("pie.php");
 ?>
