@@ -23,6 +23,7 @@
                         <td>" . $value["descripcion"] . "</td>
                         <td>" . $value["plataforma"] . "</td>
                         <td>" . $value["genero"] . "</td>
+                        <td><a href=''>loca</a></td>
                         </tr>";
                     }
                 }
