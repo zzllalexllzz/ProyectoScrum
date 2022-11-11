@@ -57,8 +57,8 @@ function pintarLocalizaciones($localizaciones)
     echo "<thead>";
     echo "<tr>";
     echo "<th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th>Importancia</th>";
+        <th>Descripcion</th>
+        <th>Importancia</th>";
     echo "</tr>";
     echo "</thead>";
     echo "<tbody>";
