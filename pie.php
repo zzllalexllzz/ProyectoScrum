@@ -2,7 +2,7 @@
         </div>
     </div>
 
-<!-- Formulario modal -->
+<!-- Formulario modal nuevo juego -->
 <div class='modal fade' id='nuevoJuego'>
     <div class='modal-dialog'>
         <div class='modal-content'>
@@ -38,11 +38,51 @@
                             <input type='text' name='genero' class='form-control form-control-user'
                                 id='' placeholder='Introduce el genero...'>
                         </div>
-                        <div class='form-group'>
                         <button type='submit' class='btn btn-primary btn-user btn-block'>
                             Insertar juego
                         </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Formulario modal nueva localizacion -->
+<div class='modal fade' id='nuevaLocalizacion'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <div class='modal-title'>
+                    <h1 class='h4 text-gray-900 mb-4'>Nueva localizacion</h1>
+                </div>            
+            </div>
+            <div class='modal-body'>
+                <div class='container-fluid'>
+                    <form method='post' class='user' action='controlador.php'>
+                        <div class='form-group'>
+                            <input type='hidden' name='nuevaLocalizacion' class='form-control form-control-user'
+                                value='nuevaLocalizacion'>
                         </div>
+                        <div class='form-group'>
+                            <label for='nombre'>Nombre:</label>
+                            <input type='text' name='nombre' class='form-control form-control-user'
+                                id='' placeholder='Introduce el nombre...'>
+                        </div>
+                        <div class='form-group'>
+                            <label for='descripcion'>Descripcion:</label>
+                            <textarea name='descripcion' class='form-control form-control-user'
+                                id='' cols="30" rows="5" placeholder='Introduce la descripcion...'></textarea>
+                        </div>
+                        <div class='form-group'>
+                            <label for='importancia'>Importancia:</label>
+                            <input type='text' name='importancia' class='form-control form-control-user'
+                                id='' placeholder='Introduce la importancia...'>
+                        </div>
+                        <button type='submit' class='btn btn-primary btn-user btn-block'>
+                            Insertar localizacion
+                        </button>
                     </form>
                 </div>
             </div>
