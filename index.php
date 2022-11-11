@@ -7,7 +7,7 @@
     $juegos = getJuegos();
 
     pintarJuegos($juegos);
-
+   
 
 
     include("pie.php");

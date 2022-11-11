@@ -11,6 +11,10 @@ function filtrado($datos){
 
 function pintarJuegos($juegos)
 {
+    echo "<button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#nuevoJuego'>
+                Insertar juego
+            </button>";
+
     echo "<table class='table'>";
     echo "<thead>";
     echo "<tr>";
@@ -33,8 +37,8 @@ function pintarJuegos($juegos)
                         <td>" . $value["genero"] . "</td>";
         }
         echo "<td><a href='controlador.php?accion=borrar&id=" . $value['id'] . "'>borrar</a></td>";
-        echo "<td><a href='controlador.php?accion=info&id=" . $value['id'] . "'>info</a></td>
-                        </tr>";
+        echo "<td><a href='controlador.php?accion=info&id=" . $value['id'] . "'>insertar</a></td>";
+        echo "<td><a href='controlador.php?accion=info&id=" . $value['id'] . "'>info</a></td> </tr>";
     }
 
 
@@ -66,10 +70,8 @@ function pintarLocalizaciones($localizaciones)
                     <td>" . $value["descripcion"] . "</td>
                     <td>" . $value["importancia"] . "</td>";
         }
-        echo "<td><a href='controlador.php?accion=borrarL&id=" . $value['id'] . "'>borrar</a></td>
-        </tr>";
+        echo "<td><a href='controlador.php?accion=borrarL&id=" . $value['id'] . "'>borrar</a></td></tr>";
     }
-
     echo "</tbody>";
     echo "</table>";
 }

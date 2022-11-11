@@ -1,6 +1,6 @@
 <?php
 
-    
+  /*  
     function conexionBD() {
         $dbh = null;
 
@@ -13,8 +13,8 @@
 
         return $dbh;
     }
+*/
 
-/*
     function conexionBD() {
         $dbh = null;
 
@@ -28,7 +28,7 @@
 
         return $dbh;
     }
-    */
+    
     /**
      * Comprobar si el juego existe 
      */
@@ -54,9 +54,7 @@
             return false;
     }
 
-    /**
-     * Obterner toda los juego
-     */
+    //Obterner toda los juego
     function getJuegos() {
         $conexion = conexionBD();
         $id = null;
@@ -74,9 +72,26 @@
         return $juegosE;
     }
 
-    /**
-     * Obtener todas las localizaciones de ese juego
-     */
+    //Obterner toda los juego
+    function getLocalizacion($idJuego) {
+        $conexion = conexionBD();
+        $id = null;
+
+        try {
+            $stmt = $conexion->prepare("SELECT * FROM localizaciones where id_juego = ?");
+            $stmt->bindValue(1, $idJuego);
+            $stmt->execute();
+            $juegosE = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            //var_dump($juegosE);
+            //$id = $juegosE['id'];
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+        $conexion = null; //Cerrar la conexión
+        return $juegosE;
+    }
+
+    //Obtener todas las localizaciones de ese juego
     function selectLocalizacion($idJuego) {
         $conexion = conexionBD();
 
@@ -93,9 +108,7 @@
         return $localizaciones;
     }
 
-    /**
-     * Insertar nuevos juegos con todos sus parametros
-     */
+    //Insertar nuevos juegos con todos sus parametros
     function insertarJuego($nombre, $descripcion, $plataforma, $genero) {
 
         
@@ -116,9 +129,28 @@
         $conexion = null; //Cerrar la conexión
     }
 
-    /**
-     * Borrar juegos mediante su id
-     */
+    //Insertar nuevas localizaciones con todos sus parametros
+    function insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego) {
+
+        
+        $conexion = conexionBD();
+
+        try {
+            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, importancia, id_juego) VALUES (?, ?, ?, ?)" );
+
+            $stmt->bindValue(1, $nombre);
+            $stmt->bindValue(2, $descripcion);
+            $stmt->bindValue(3, $importancia);
+            $stmt->bindValue(4, $idJuego);
+            
+            $stmt->execute();
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+        $conexion = null; //Cerrar la conexión
+    }
+
+    //Borrar juegos mediante su id
     function borrarJuego($idJuego) {
         $conexion = conexionBD();
 

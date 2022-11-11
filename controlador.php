@@ -29,6 +29,7 @@ if (isset($_GET['accion'])) {
 
 // POST ----------------------------------------------------
 if ($_POST) {
+    $id = 0;
     // Comprobamos si se ha enviado algo por el formulario de juego nuevo
     if (isset($_POST['nuevoJuego'])) {
         $nombre = filtrado($_POST['nombre']);
@@ -37,7 +38,23 @@ if ($_POST) {
         $genero = filtrado($_POST['genero']);
 
         insertarJuego($nombre, $descripcion, $plataforma, $genero);
+        header("Location: index.php");
     }
+
+    // Comprobamos si se ha enviado algo por el formulario de nueva localizacion
+    if (isset($_POST['nuevaLocalizacion'])) {
+        $nombre = filtrado($_POST['nombre']);
+        $descripcion = filtrado($_POST['descripcion']);
+        $importancia = filtrado($_POST['importancia']);
+       
+
+        insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
+        header("Location: index.php?localizacion");
+        
+    }
+
 }
+
+include_once('pie.php');
 
 ?>
