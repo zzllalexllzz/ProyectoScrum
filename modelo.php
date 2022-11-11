@@ -27,7 +27,8 @@
         }
 
         return $dbh;
-    }*/
+    }
+    */
     /**
      * Comprobar si el juego existe 
      */
@@ -124,6 +125,20 @@
         try {
             $stmt = $conexion->prepare("DELETE FROM juegos WHERE id = ?");
             $stmt->bindValue(1, $idJuego);
+            $stmt->execute();
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+        $conexion = null; //Cerrar la conexión
+    }
+
+    //Borrar Localizacion
+    function borrarLocalizacion($idLocalizacion) {
+        $conexion = conexionBD();
+
+        try {
+            $stmt = $conexion->prepare("DELETE FROM localizaciones WHERE id = ?");
+            $stmt->bindValue(1, $idLocalizacion);
             $stmt->execute();
         } catch (PDOException $ex) {
             echo $ex->getMessage();
