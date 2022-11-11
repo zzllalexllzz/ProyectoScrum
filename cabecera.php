@@ -13,3 +13,4 @@
 </head>
 <body>
     <h1>GamerTool</h1>
+    <a href="controlador.php?accion=insertar">añadir</a>

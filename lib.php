@@ -22,10 +22,11 @@
                         <td>" . $value["nombre"] . "</td>
                         <td>" . $value["descripcion"] . "</td>
                         <td>" . $value["plataforma"] . "</td>
-                        <td>" . $value["genero"] . "</td>
-                        <td><a href=''>loca</a></td>
-                        </tr>";
+                        <td>" . $value["genero"] . "</td>";
+                        
                     }
+                    echo "<td><a href='controlador.php?accion=borrar&id=".$value['id']."'>borrar</a></td>
+                        </tr>";
                 }
             
           

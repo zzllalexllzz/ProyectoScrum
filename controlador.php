@@ -14,8 +14,9 @@
         }
 
         // Eliminar juego
-        if ($_GET['accion'] == 'eliminar') {
-            
+        if ($_GET['accion'] == 'borrar') {
+            borrarJuego($_GET['id']);
+            header("Location: index.php");
         }
     }
 
