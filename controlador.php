@@ -26,18 +26,17 @@ if (isset($_GET['accion'])) {
     
     
 }
-if ($_GET['accion']=='insert') {
-    if (isset($_GET['insertarLocalizacion'])) {
-        $nombre = filtrado($_GET['nombre']);
-        $descripcion = filtrado($_GET['descripcion']);
-        $importancia = filtrado($_GET['importancia']);
+if (isset($_GET['insertarLocalizacion'])) {
+    $nombre = filtrado($_GET['nombre']);
+    $descripcion = filtrado($_GET['descripcion']);
+    $importancia = filtrado($_GET['importancia']);
+    if ($_GET['accion']=='insert') {
         $idJuego = filtrado($_GET['id']);
-        
-        insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
-        header("Location: index.php");
-    }
+    } 
+    echo $idJuego;
+    insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
+    header("Location: index.php");
 }
-
 
 // POST ----------------------------------------------------
 if ($_POST) {
