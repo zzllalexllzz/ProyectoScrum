@@ -22,10 +22,6 @@ if (isset($_GET['accion'])) {
     if ($_GET['accion'] == 'borrarL') {
         borrarLocalizacion($_GET['id']);
             header("Location: index.php");
-    }
-    if ($_GET['accion']=='insert') {
-        $idJuego = filtrado($_GET['id']);
-        echo $idJuego;
     } 
     
 }
@@ -34,8 +30,9 @@ if (isset($_GET['insertarLocalizacion'])) {
     $nombre = filtrado($_GET['nombre']);
     $descripcion = filtrado($_GET['descripcion']);
     $importancia = filtrado($_GET['importancia']);
+    $idJuego = filtrado($_GET['id']);
 
-    insertarLocalizacion($nombre, $descripcion, $importancia, $ids);
+    insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
     //header("Location: index.php");
 }
 
