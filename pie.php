@@ -60,7 +60,7 @@
             </div>
             <div class='modal-body'>
                 <div class='container-fluid'>
-                    <form method='post' class='user' action='controlador.php'>
+                    <form id="formInsertarLocalizacion">
                         <div class='form-group'>
                             <input type='hidden' name='nuevaLocalizacion' class='form-control form-control-user'
                                 value='nuevaLocalizacion'>
