@@ -80,7 +80,7 @@
                             <input type='text' name='importancia' class='form-control form-control-user'
                                 id='' placeholder='Introduce la importancia...'>
                         </div>
-                        <button type='submit' class='btn btn-primary btn-user btn-block'>
+                        <button type='submit' name="insertarLocalizacion" form="formInsertarLocalizacion" formaction="controlador.php" formmethod="get" class='btn btn-primary btn-user btn-block'>
                             Insertar localizacion
                         </button>
                     </form>

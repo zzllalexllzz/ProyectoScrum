@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //Función para limpiar los input de los formularios
 function filtrado($datos){
     $datos = trim($datos); // Elimina espacios antes y después de los datos
@@ -38,9 +38,7 @@ function pintarJuegos($juegos)
         }
         echo "<td><a href='controlador.php?accion=borrar&id=" . $value['id'] . "'>borrar</a></td>";
         echo "<td><a href='controlador.php?accion=info&id=" . $value['id'] . "'>insertar</a></td>";
-        echo "<td><button type='submit' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion'>
-        Insertar localizacion
-    </button></td> </tr>";
+        echo "<td></a><button type='button' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion'><a href='controlador.php?accion=insert&id=" . $value['id'] . "'>Insertar juego</a></button></td></tr>";
     }
 
 
