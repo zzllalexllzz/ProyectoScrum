@@ -25,12 +25,11 @@ if (isset($_GET['accion'])) {
     } 
     
 }
-$ids=$idJuego;
 if (isset($_GET['insertarLocalizacion'])) {
     $nombre = filtrado($_GET['nombre']);
     $descripcion = filtrado($_GET['descripcion']);
     $importancia = filtrado($_GET['importancia']);
-    $idJuego = filtrado($_GET['id']);
+    //$idJuego = filtrado($_GET['id']);
 
     insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
     //header("Location: index.php");
