@@ -35,7 +35,7 @@ if (isset($_GET['insertarLocalizacion'])) {
     } 
     echo $idJuego;
     insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
-    header("Location: index.php");
+    //header("Location: index.php");
 }
 
 // POST ----------------------------------------------------
