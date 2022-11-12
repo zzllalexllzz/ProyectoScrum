@@ -23,17 +23,17 @@ if (isset($_GET['accion'])) {
         borrarLocalizacion($_GET['id']);
             header("Location: index.php");
     }
-    
+    if ($_GET['accion']=='insert') {
+        $idJuego = filtrado($_GET['id']);
+        echo $idJuego;
+    } 
     
 }
 if (isset($_GET['insertarLocalizacion'])) {
     $nombre = filtrado($_GET['nombre']);
     $descripcion = filtrado($_GET['descripcion']);
     $importancia = filtrado($_GET['importancia']);
-    if ($_GET['accion']=='insert') {
-        $idJuego = filtrado($_GET['id']);
-    } 
-    echo $idJuego;
+
     insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
     //header("Location: index.php");
 }
