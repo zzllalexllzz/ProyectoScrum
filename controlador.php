@@ -24,6 +24,20 @@ if (isset($_GET['accion'])) {
         borrarLocalizacion($_GET['id']);
             header("Location: index.php");
     }
+    // Insertamos una nueva localizacion
+    if ($_GET['accion']=='insertar') {
+        // Comprobamos si se ha enviado algo por el formulario de nueva localizacion
+        if (isset($_POST['nuevaLocalizacion'])) {
+            $nombre = filtrado($_POST['nombre']);
+            $descripcion = filtrado($_POST['descripcion']);
+            $importancia = filtrado($_POST['importancia']);
+        
+
+            insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
+            header("Location: index.php?localizacion");
+        
+        }
+    }
     
 }
 

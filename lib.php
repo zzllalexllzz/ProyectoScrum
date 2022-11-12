@@ -38,7 +38,9 @@ function pintarJuegos($juegos)
         }
         echo "<td><a href='controlador.php?accion=borrar&id=" . $value['id'] . "'>borrar</a></td>";
         echo "<td><a href='controlador.php?accion=info&id=" . $value['id'] . "'>insertar</a></td>";
-        echo "<td><a href='controlador.php?accion=info&id=" . $value['id'] . "'>info</a></td> </tr>";
+        echo "<td><button type='submit' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion'>
+        Insertar localizacion
+    </button></td> </tr>";
     }
 
 
