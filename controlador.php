@@ -1,5 +1,4 @@
 <?php
-
 include_once('modelo.php');
 include_once('lib.php');
 
@@ -12,6 +11,7 @@ if (isset($_GET['accion'])) {
         $localizaciones = selectLocalizacion($_GET['id']);
 
         pintarLocalizaciones($localizaciones);
+        include_once('pie.php');
     } 
     // Eliminar juego
     if ($_GET['accion'] == 'borrar') {
@@ -62,7 +62,4 @@ if ($_POST) {
     }
     */
 }
-
-include_once('pie.php');
-
 ?>

@@ -11,18 +11,14 @@ function filtrado($datos){
 
 function pintarJuegos($juegos)
 {
-    echo "<button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#nuevoJuego'>
-                Insertar juego
-            </button>";
-
-    echo "<table class='table'>";
+    echo "<table class='table table-success table-striped'>";
     echo "<thead>";
     echo "<tr>";
     echo "<th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th>Plataforma</th>
-                        <th>Genero</th>
-                        <th>Acciones</th>";
+        <th>Descripcion</th>
+        <th>Plataforma</th>
+        <th>Genero</th>
+        <th>Acciones</th>";
     echo "</tr>";
     echo "</thead>";
     echo "<tbody>";
@@ -31,14 +27,20 @@ function pintarJuegos($juegos)
     foreach ($juegos as $key => $value) {
         if ($key != "id") {
             echo "<tr>
-                        <td>" . $value["nombre"] . "</td>
-                        <td>" . $value["descripcion"] . "</td>
-                        <td>" . $value["plataforma"] . "</td>
-                        <td>" . $value["genero"] . "</td>";
+                    <td>" . $value["nombre"] . "</td>
+                    <td>" . $value["descripcion"] . "</td>
+                    <td align='center'>" . $value["plataforma"] . "</td>
+                    <td align='center'>" . $value["genero"] . "</td>";
         }
-        echo "<td><a href='controlador.php?accion=borrar&id=" . $value['id'] . "'>borrar</a></td>";
-        echo "<td><a href='controlador.php?accion=info&id=" . $value['id'] . "'>info</a></td>";
-        echo "<td><a href='#' type='button' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion" . $value['id'] . "'>insertarL</a></td></tr>";
+        echo "<td align='center'><a href='controlador.php?accion=borrar&id=" . $value['id'] . "' class='btn btn-outline-danger'><span class='material-symbols-outlined'>
+        delete
+        </span></a>
+        <a href='controlador.php?accion=info&id=" . $value['id'] . "' class='btn btn-outline-info'><span class='material-symbols-outlined'>
+        info
+        </span</a>
+       <a href='#' type='button' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion" . $value['id'] . "' class='btn btn-outline-success'><span class='material-symbols-outlined'>
+       add
+       </span></a></td></tr>";
         pintarModal($value['id']);
     }
 
@@ -51,24 +53,27 @@ function pintarJuegos($juegos)
 
 function pintarLocalizaciones($localizaciones)
 {
-    echo "<table class='table'>";
-    echo "<thead>";
-    echo "<tr>";
-    echo "<th>Nombre</th>
-        <th>Descripcion</th>
-        <th>Importancia</th>";
-    echo "</tr>";
-    echo "</thead>";
+    echo "<table class='table table-success table-striped'>";
+        echo "<thead>";
+            echo "<tr>";
+                echo "<th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Importancia</th>
+                    <th>Acciones</th>";
+            echo "</tr>";
+        echo "</thead>";
     echo "<tbody>";
 
     foreach ($localizaciones as $key => $value) {
         if ($key != "id" && $key != "id_juego") {
             echo "<tr>
-                    <td>" . $value["nombre"] . "</td>
+                    <td align='center'>" . $value["nombre"] . "</td>
                     <td>" . $value["descripcion"] . "</td>
-                    <td>" . $value["importancia"] . "</td>";
+                    <td align='center'>" . $value["importancia"] . "</td>";
         }
-        echo "<td><a href='controlador.php?accion=borrarL&id=" . $value['id'] . "'>borrar</a></td></tr>";
+        echo "<td align='center'><a class='btn btn-outline-danger' href='controlador.php?accion=borrarL&id=" . $value['id'] . "'><span class='material-symbols-outlined'>
+        delete
+        </span</a></td></tr>";
     }
     echo "</tbody>";
     echo "</table>";
