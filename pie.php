@@ -48,8 +48,8 @@
     </div>
 </div>
 
+<!--
 
-<!-- Formulario modal nueva localizacion -->
 <div class='modal fade' id='nuevaLocalizacion'>
     <div class='modal-dialog'>
         <div class='modal-content'>
@@ -60,7 +60,7 @@
             </div>
             <div class='modal-body'>
                 <div class='container-fluid'>
-                    <form id="formInsertarLocalizacion">
+                    <form id='formInsertarLocalizacion'>
                         <div class='form-group'>
                             <input type='hidden' name='nuevaLocalizacion' class='form-control form-control-user'
                                 value='nuevaLocalizacion'>
@@ -80,14 +80,14 @@
                             <input type='text' name='importancia' class='form-control form-control-user'
                                 id='' placeholder='Introduce la importancia...'>
                         </div>
-                        <button type='submit' name="insertarLocalizacion" form="formInsertarLocalizacion" formaction="controlador.php" formmethod="get" class='btn btn-primary btn-user btn-block'>
+                        <button type='submit' name='insertarLocalizacion' form='formInsertarLocalizacion' formaction='controlador.php' formmethod='get' class='btn btn-primary btn-user btn-block'>
                             Insertar localizacion
                         </button>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 </div>
 </body>
 </html>

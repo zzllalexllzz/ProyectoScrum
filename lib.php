@@ -38,7 +38,8 @@ function pintarJuegos($juegos)
         }
         echo "<td><a href='controlador.php?accion=borrar&id=" . $value['id'] . "'>borrar</a></td>";
         echo "<td><a href='controlador.php?accion=info&id=" . $value['id'] . "'>info</a></td>";
-        echo "<td><a href='controlador.php?accion=insert&id=" . $value['id'] . "' type='button' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion'>insertarL</a></td></tr>";
+        echo "<td><a href='#' type='button' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion" . $value['id'] . "'>insertarL</a></td></tr>";
+        pintarModal($value['id']);
     }
 
     echo "</tbody>";
@@ -73,5 +74,50 @@ function pintarLocalizaciones($localizaciones)
     echo "</table>";
 }
 
+function pintarModal($idJuego){
+    echo "<div class='modal fade' id='nuevaLocalizacion".$idJuego."'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <div class='modal-title'>
+                    <h1 class='h4 text-gray-900 mb-4'>Nueva localizacion</h1>
+                </div>            
+            </div>
+            <div class='modal-body'>
+                <div class='container-fluid'>
+                    <form id='formInsertarLocalizacion'>
+                        <div class='form-group'>
+                            <input type='hidden' name='nuevaLocalizacion' class='form-control form-control-user'
+                                value='nuevaLocalizacion'>
+                        </div>
+                        <div class='form-group'>
+                            <label for='nombre'>Nombre:</label>
+                            <input type='text' name='nombre' class='form-control form-control-user'
+                                id='' placeholder='Introduce el nombre...'>
+                        </div>
+                        <div class='form-group'>
+                            <label for='descripcion'>Descripcion:</label>
+                            <textarea name='descripcion' class='form-control form-control-user'
+                                id='' cols='30' rows='5' placeholder='Introduce la descripcion...'></textarea>
+                        </div>
+                        <div class='form-group'>
+                            <label for='importancia'>Importancia:</label>
+                            <input type='text' name='importancia' class='form-control form-control-user'
+                                id='' placeholder='Introduce la importancia...'>
+                        </div>
+                        <div class='form-group'>
+                            <label for='idJuego'>Id:</label>
+                            <input type='number' name='id_juego' class='form-control form-control-user'
+                                id='' value='".$idJuego."'>
+                        </div>
+                        <button type='submit' name='insertarLocalizacion' form='formInsertarLocalizacion' formaction='controlador.php' formmethod='get' class='btn btn-primary btn-user btn-block'>
+                            Insertar localizacion
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div'";
+}
 
 ?>
