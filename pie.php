@@ -30,13 +30,29 @@
                         </div>
                         <div class='form-group'>
                             <label for='plataforma'>Plataforma:</label>
-                            <input type='text' name='plataforma' class='form-control form-control-user'
-                                id='' placeholder='Introduce la plataforma...'>
+                            <select name="plataforma">
+                                <option value="Windows">Windows</option>
+                                <option value="MacOs">MacOs</option>
+                                <option value="Play Station">Play Station</option>
+                                <option value="Xbox">Xbox</option>
+                                <option value="Steam">Steam</option>
+                                <option value="Epic Games">Epic Games</option>
+                                <option value="Battle Net">Battle Net</option>
+                                <option value="Origin">Origin</option>
+
+                            </select>
                         </div>
                         <div class='form-group'>
                             <label for='genero'>Genero:</label>
-                            <input type='text' name='genero' class='form-control form-control-user'
-                                id='' placeholder='Introduce el genero...'>
+                                <select name="genero">
+                                    <option value="Moba">Moba</option>
+                                    <option value="Shooter">Shooter</option>
+                                    <option value="Auto Battler">AutoBattler</option>
+                                    <option value="Juego de Cartas">JuegodeCartas</option>
+                                    <option value="Battle Royal">BattleRoyal</option>
+                                    <option value="Rol">Rol</option>
+                                    <option value="Sand Box">Sand Box</option>
+                                </select>
                         </div>
                         <button type='submit' class='btn btn-primary btn-user btn-block'>
                             Insertar juego
