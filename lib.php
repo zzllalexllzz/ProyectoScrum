@@ -75,7 +75,7 @@ function pintarLocalizaciones($localizaciones)
 }
 
 function pintarModal($idJuego){
-    echo "<div class='modal fade' id='".$idJuego."'>
+    echo "<div class='modal fade' id='nuevaLocalizacion".$idJuego."'>
     <div class='modal-dialog'>
         <div class='modal-content'>
             <div class='modal-header'>
