@@ -106,8 +106,8 @@ function pintarModal($idJuego){
                                 id='' placeholder='Introduce la importancia...'>
                         </div>
                         <div class='form-group'>
-                            <label for='idjuego'>Id:</label>
-                            <input type='number' name='idjuego' class='form-control form-control-user'
+                            <label hidden for='idjuego'>Id:</label>
+                            <input type='hidden' name='idjuego' class='form-control form-control-user'
                                 id='' value='".$idJuego."'>
                         </div>
                         <button type='submit' name='insertarLocalizacion' form='formInsertarLocalizacion' formaction='controlador.php' formmethod='get' class='btn btn-primary btn-user btn-block'>
