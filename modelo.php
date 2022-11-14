@@ -1,6 +1,6 @@
 <?php
 
-    /*
+
     function conexionBD() {
         $dbh = null;
 
@@ -13,8 +13,8 @@
 
         return $dbh;
     }
-    */
-
+    
+    /*
     function conexionBD() {
         $dbh = null;
 
@@ -27,7 +27,7 @@
         }
 
         return $dbh;
-    }
+    }*/
     
     
     /**
