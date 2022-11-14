@@ -38,10 +38,15 @@ function pintarJuegos($juegos)
         <a href='controlador.php?accion=info&id=" . $value['id'] . "' class='btn btn-outline-info'><span class='material-symbols-outlined'>
         info
         </span</a>
-       <a href='#' type='button' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion" . $value['id'] . "' class='btn btn-outline-success'><span class='material-symbols-outlined'>
+        <a href='#' type='button' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion' class='btn btn-outline-success order-submit abrirmodal' id=" . $value['id'] . "><span class='material-symbols-outlined'>
        add
-       </span></a></td></tr>";
-        pintarModal($value['id']);
+       </span></a>
+       
+       </td></tr>";
+        //pintarModal($value['id']);
+        // <a href='#' type='button' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion" . $value['id'] . "' class='btn btn-outline-success'><span class='material-symbols-outlined'>
+       //add
+       //</span></a>
     }
 
     echo "</tbody>";
@@ -78,7 +83,7 @@ function pintarLocalizaciones($localizaciones)
     echo "</tbody>";
     echo "</table>";
 }
-
+/*
 function pintarModal($idJuego){
     echo "<div class='modal fade' id='nuevaLocalizacion".$idJuego."'>
     <div class='modal-dialog'>
@@ -107,7 +112,7 @@ function pintarModal($idJuego){
                         </div>
                         <div class='form-group'>
                             <label for='importancia'>Importancia:</label>
-                            <select name='importancia' >
+                            <select name='importancia' class='form-control form-control-user'>
                                 <option value='1'>Uno</option>
                                 <option value='2'>Dos</option>
                                 <option value='3'>Tres</option>
@@ -126,6 +131,6 @@ function pintarModal($idJuego){
             </div>
         </div>
     </div'";
-}
+}*/
 
 ?>

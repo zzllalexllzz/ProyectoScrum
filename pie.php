@@ -1,14 +1,12 @@
-            </div>
-        </div>
     </div>
 
-<!-- Formulario modal nuevo juego -->
+<!-- Formulario modal juego nuevo -->
 <div class='modal fade' id='nuevoJuego'>
     <div class='modal-dialog'>
-        <div class='modal-content'>
+        <div class='modal-content text-dark'>
             <div class='modal-header'>
                 <div class='modal-title'>
-                    <h1 class='h4 text-gray-900 mb-4'>Nuevo juego</h1>
+                    <h1 class='h4 text-gray-900 mb-4'>Juego nuevo</h1>
                 </div>            
             </div>
             <div class='modal-body'>
@@ -30,7 +28,7 @@
                         </div>
                         <div class='form-group'>
                             <label for='plataforma'>Plataforma:</label>
-                            <select name="plataforma">
+                            <select name="plataforma" class='form-control form-control-user'>
                                 <option value="Windows">Windows</option>
                                 <option value="MacOs">MacOs</option>
                                 <option value="Play Station">Play Station</option>
@@ -44,17 +42,17 @@
                         </div>
                         <div class='form-group'>
                             <label for='genero'>Genero:</label>
-                                <select name="genero">
-                                    <option value="Moba">Moba</option>
-                                    <option value="Shooter">Shooter</option>
-                                    <option value="Auto Battler">AutoBattler</option>
-                                    <option value="Juego de Cartas">JuegodeCartas</option>
-                                    <option value="Battle Royal">BattleRoyal</option>
-                                    <option value="Rol">Rol</option>
-                                    <option value="Sand Box">Sand Box</option>
-                                </select>
+                            <select name="genero" class='form-control form-control-user'>
+                                <option value="Moba">Moba</option>
+                                <option value="Shooter">Shooter</option>
+                                <option value="Auto Battler">AutoBattler</option>
+                                <option value="Juego de Cartas">JuegodeCartas</option>
+                                <option value="Battle Royal">BattleRoyal</option>
+                                <option value="Rol">Rol</option>
+                                <option value="Sand Box">Sand Box</option>
+                            </select>
                         </div>
-                        <button type='submit' class='btn btn-primary btn-user btn-block'>
+                        <button type='submit' class='btn btn-success mt-3'>
                             Insertar juego
                         </button>
                     </form>
@@ -64,19 +62,20 @@
     </div>
 </div>
 
-<!--
+<!-- Formulario modal localizacion nueva -->
 
 <div class='modal fade' id='nuevaLocalizacion'>
     <div class='modal-dialog'>
-        <div class='modal-content'>
+        <div class='modal-content text-dark'>
             <div class='modal-header'>
                 <div class='modal-title'>
-                    <h1 class='h4 text-gray-900 mb-4'>Nueva localizacion</h1>
+                    <h1 class='h4 text-gray-900 mb-4'>Localizacion nueva</h1>
                 </div>            
             </div>
             <div class='modal-body'>
                 <div class='container-fluid'>
-                    <form id='formInsertarLocalizacion'>
+                    <form method='post' class='user' action='controlador.php'>
+                    <!-- id='formInsertarLocalizacion' -->
                         <div class='form-group'>
                             <input type='hidden' name='nuevaLocalizacion' class='form-control form-control-user'
                                 value='nuevaLocalizacion'>
@@ -93,10 +92,20 @@
                         </div>
                         <div class='form-group'>
                             <label for='importancia'>Importancia:</label>
-                            <input type='text' name='importancia' class='form-control form-control-user'
-                                id='' placeholder='Introduce la importancia...'>
+                            <select name='importancia' class='form-control form-control-user'>
+                                <option value='1'>Uno</option>
+                                <option value='2'>Dos</option>
+                                <option value='3'>Tres</option>
+                            </select>
                         </div>
-                        <button type='submit' name='insertarLocalizacion' form='formInsertarLocalizacion' formaction='controlador.php' formmethod='get' class='btn btn-primary btn-user btn-block'>
+                        <div class='form-group'>
+                            <input type='hidden' name='idjuego' class='form-control form-control-user'
+                                id='idjuego' value="">
+                        </div>
+                        <!-- <button type='submit' name='insertarLocalizacion' form='formInsertarLocalizacion' formaction='controlador.php' formmethod='get' class='btn btn-primary btn-user btn-block'>
+                            Insertar localizacion
+                        </button> -->
+                        <button type='submit' class='btn btn-success mt-3'>
                             Insertar localizacion
                         </button>
                     </form>
@@ -104,12 +113,28 @@
             </div>
         </div>
     </div>
-</div>-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</div>
+    <!-- Script para capturar el id del juego al que se agrega la localizacion nueva -->
+    <script>
+        $(".abrirmodal").click(function(){
+
+            //Capturamos el valor del id para enviarlo al modal
+
+            let idjuego = $(this).attr('id');
+
+            //Pasamos el id al campo input hiddien del modal.
+
+            $("input#idjuego").val(idjuego);
+
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/slick.js"></script>
-  <script src="js/templatemo-script.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/templatemo-script.js"></script>
 </body>
 </html>

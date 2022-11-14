@@ -25,6 +25,7 @@ if (isset($_GET['accion'])) {
     } 
     
 }
+/*
 if (isset($_GET['insertarLocalizacion'])) {
     $nombre = filtrado($_GET['nombre']);
     $descripcion = filtrado($_GET['descripcion']);
@@ -33,11 +34,11 @@ if (isset($_GET['insertarLocalizacion'])) {
 
     insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
     //header("Location: index.php");
-}
+}*/
 
 // POST ----------------------------------------------------
 if ($_POST) {
-    $id = 0;
+    
     // Comprobamos si se ha enviado algo por el formulario de juego nuevo
     if (isset($_POST['nuevoJuego'])) {
         $nombre = filtrado($_POST['nombre']);
@@ -48,18 +49,18 @@ if ($_POST) {
         insertarJuego($nombre, $descripcion, $plataforma, $genero);
         header("Location: index.php");
     }
-    /*
+    
     // Comprobamos si se ha enviado algo por el formulario de nueva localizacion
     if (isset($_POST['nuevaLocalizacion'])) {
         $nombre = filtrado($_POST['nombre']);
         $descripcion = filtrado($_POST['descripcion']);
         $importancia = filtrado($_POST['importancia']);
-       
+        $idJuego = $_POST['idjuego'];
 
         insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
-        header("Location: index.php?localizacion");
+        header("Location: index.php");
         
     }
-    */
+    
 }
 ?>
