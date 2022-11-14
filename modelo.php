@@ -1,6 +1,6 @@
 <?php
 
-
+    
     function conexionBD() {
         $dbh = null;
 

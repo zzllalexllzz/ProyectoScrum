@@ -3,7 +3,7 @@
 <!-- Formulario modal juego nuevo -->
 <div class='modal fade' id='nuevoJuego'>
     <div class='modal-dialog'>
-        <div class='modal-content text-dark'>
+        <div class='modal-content text-dark fondomodal'>
             <div class='modal-header'>
                 <div class='modal-title'>
                     <h1 class='h4 text-gray-900 mb-4'>Juego nuevo</h1>
@@ -122,7 +122,7 @@
 
             let idjuego = $(this).attr('id');
 
-            //Pasamos el id al campo input hiddien del modal.
+            //Pasamos el id al campo input hidden del modal
 
             $("input#idjuego").val(idjuego);
 

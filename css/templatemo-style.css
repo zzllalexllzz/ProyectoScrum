@@ -18,6 +18,10 @@ body {
     line-height: 1.5;
 }
 
+.fondomodal{
+    background-color: #00b0a7d0;
+}
+
 a {
 	color: #02cfc5;
     text-decoration: none;
@@ -468,7 +472,7 @@ figure.effect-julia:hover p {
 
 .form-control,
 .form-control:focus {
-    color: white;
+    color: black;
     background-color: transparent;
 }
 
@@ -479,10 +483,10 @@ figure.effect-julia:hover p {
     box-shadow: none;
   }
 
-.form-control::-webkit-input-placeholder { color: white; }
-.form-control:-moz-placeholder { color: white; }
-.form-control::-moz-placeholder { color: white; }
-.form-control:-ms-input-placeholder { color: white; }
+.form-control::-webkit-input-placeholder { color: rgba(0, 0, 0, 0.479); }
+.form-control:-moz-placeholder { color: rgba(0, 0, 0, 0.479); }
+.form-control::-moz-placeholder { color: rgba(0, 0, 0, 0.479); }
+.form-control:-ms-input-placeholder { color: rgba(0, 0, 0, 0.479); }
 
 .tm-mb-30 {
     margin-bottom: 30px;
