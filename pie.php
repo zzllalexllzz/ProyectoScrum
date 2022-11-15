@@ -19,7 +19,7 @@
                         <div class='form-group'>
                             <label for='nombre'>Nombre:</label>
                             <input type='text' name='nombre' class='form-control form-control-user'
-                                id='' placeholder='Introduce el nombre...'>
+                                id='' >
                         </div>
                         <div class='form-group'>
                             <label for='descripcion'>Descripcion:</label>

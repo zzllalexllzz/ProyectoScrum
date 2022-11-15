@@ -16,16 +16,16 @@ if (isset($_GET['accion'])) {
                         <div class='form-group'>
                             <label for='nombre'>Nombre:</label>
                             <input type='text' name='nombre' class='form-control form-control-user text-white'
-                                id='' placeholder='Introduce el nombre...'>
+                                id='' >
                         </div>
                         <div class='form-group'>
                             <label for='descripcion'>Descripcion:</label>
                             <textarea name='descripcion' class='form-control form-control-user text-white'
-                                id='' cols='30' rows='5' placeholder='Introduce la descripcion...'></textarea>
+                                id='' cols='30' rows='5' ></textarea>
                         </div>
                         <div class='form-group'>
                             <label for='importancia'>Importancia:</label>
-                            <select name='importancia' class='form-control form-control-user'>
+                            <select name='importancia' class='form-control form-control-user '>
                                 <option value='1'>Uno</option>
                                 <option value='2'>Dos</option>
                                 <option value='3'>Tres</option>
