@@ -14,11 +14,9 @@
           <div class="intro-left tm-bg-dark">
             <h2 class="mb-4">Bienvenido a Game Tool</h2>
             <p class="mb-4">
-              This HTML template has a motion video background loop which is provided by <a rel="sponsored" href="https://getfreepictures.com" target="_blank">Get Free Pictures</a>. This is
-              one-page responsive layout for your websites. Feel
-            free to use this for a commercial purpose. </p>
-            <p class="mb-0">
-            You are not permitted to redistribute this template on your Free CSS collection websites. Please <a rel="nofollow" href="https://templatemo.com/contact" target="_blank">contact us</a> for more information. </p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas autem corporis! Dolorum sint doloribus, earum nihil, officiis, quidem ipsum voluptatum id rerum ducimus sequi vero nisi minima fugit facere!
+              Fugiat, officiis amet labore ullam in veritatis. Quasi molestias facilis beatae quia nobis. A ab saepe, fugit dolores voluptas nisi esse sint aliquid adipisci sed porro possimus repellat, sunt eos!
+              Assumenda ducimus repudiandae veniam necessitatibus sed facere sunt voluptas praesentium esse numquam, mollitia pariatur ratione labore voluptatibus, perferendis fugiat laudantium eum vel aliquam, sint aperiam. Sint dolore perspiciatis qui tempore.
           </div>
           <div class="intro-right">
             <img src="img/home-img-1.jpg" alt="Image" class="img-fluid intro-img-1">
