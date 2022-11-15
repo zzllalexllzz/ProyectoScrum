@@ -47,7 +47,7 @@ if ($_POST) {
         $genero = filtrado($_POST['genero']);
 
         insertarJuego($nombre, $descripcion, $plataforma, $genero);
-        header("Location: index.php");
+        header("Location: index.php?juegos");
     }
     
     // Comprobamos si se ha enviado algo por el formulario de nueva localizacion
@@ -58,7 +58,7 @@ if ($_POST) {
         $idJuego = $_POST['idjuego'];   
 
         insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
-        header("Location: index.php");
+        header("Location: index.php?juegos");
         
     }
     
