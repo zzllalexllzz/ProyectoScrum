@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 //Función para limpiar los input de los formularios
 function filtrado($datos){
     $datos = trim($datos); // Elimina espacios antes y después de los datos
@@ -11,6 +11,7 @@ function filtrado($datos){
 
 function pintarJuegos($juegos)
 {
+    echo"<h1 class='titulo text-center'>JUEGOS</h1>";
     echo "<table class='table table-success table-striped'>";
     echo "<thead>";
     echo "<tr>";
@@ -37,10 +38,11 @@ function pintarJuegos($juegos)
         </span></a>
         <a href='controlador.php?accion=info&id=" . $value['id'] . "' class='btn btn-outline-info'><span class='material-symbols-outlined'>
         info
-        </span</a>
-        <a href='#' type='button' data-bs-toggle='modal' data-bs-target='#nuevaLocalizacion' class='btn btn-outline-success order-submit abrirmodal' id=" . $value['id'] . "><span class='material-symbols-outlined'>
-       add
-       </span></a>
+        </span></a>
+        </a>
+        <a href='formLoca.php?accion=insertar&id=".$value['id']."' class='btn btn-outline-success'><span class='material-symbols-outlined'>
+        add
+        </span></a>
        
        </td></tr>";
         //pintarModal($value['id']);
@@ -58,6 +60,7 @@ function pintarJuegos($juegos)
 
 function pintarLocalizaciones($localizaciones)
 {
+    echo"<h1 class='titulo text-center'>LOCALIZACIONES</h1>";
     echo "<table class='table table-success table-striped'>";
         echo "<thead>";
             echo "<tr>";
@@ -83,54 +86,5 @@ function pintarLocalizaciones($localizaciones)
     echo "</tbody>";
     echo "</table>";
 }
-/*
-function pintarModal($idJuego){
-    echo "<div class='modal fade' id='nuevaLocalizacion".$idJuego."'>
-    <div class='modal-dialog'>
-        <div class='modal-content'>
-            <div class='modal-header'>
-                <div class='modal-title'>
-                    <h1 class='h4 text-gray-900 mb-4'>Nueva localizacion</h1>
-                </div>            
-            </div>
-            <div class='modal-body'>
-                <div class='container-fluid'>
-                    <form id='formInsertarLocalizacion'>
-                        <div class='form-group'>
-                            <input type='hidden' name='nuevaLocalizacion' class='form-control form-control-user'
-                                value='nuevaLocalizacion'>
-                        </div>
-                        <div class='form-group'>
-                            <label for='nombre'>Nombre:</label>
-                            <input type='text' name='nombre' class='form-control form-control-user'
-                                id='' placeholder='Introduce el nombre...'>
-                        </div>
-                        <div class='form-group'>
-                            <label for='descripcion'>Descripcion:</label>
-                            <textarea name='descripcion' class='form-control form-control-user'
-                                id='' cols='30' rows='5' placeholder='Introduce la descripcion...'></textarea>
-                        </div>
-                        <div class='form-group'>
-                            <label for='importancia'>Importancia:</label>
-                            <select name='importancia' class='form-control form-control-user'>
-                                <option value='1'>Uno</option>
-                                <option value='2'>Dos</option>
-                                <option value='3'>Tres</option>
-                            </select>
-                        </div>
-                        <div class='form-group'>
-                            <label hidden for='idjuego'>Id:</label>
-                            <input type='number' name='idjuego' class='form-control form-control-user'
-                                id='' value='".$idJuego."'>
-                        </div>
-                        <button type='submit' name='insertarLocalizacion' form='formInsertarLocalizacion' formaction='controlador.php' formmethod='get' class='btn btn-primary btn-user btn-block'>
-                            Insertar localizacion
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div'";
-}*/
 
 ?>

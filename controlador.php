@@ -55,7 +55,7 @@ if ($_POST) {
         $nombre = filtrado($_POST['nombre']);
         $descripcion = filtrado($_POST['descripcion']);
         $importancia = filtrado($_POST['importancia']);
-        $idJuego = $_POST['idjuego'];
+        $idJuego = $_POST['idjuego'];   
 
         insertarLocalizacion($nombre, $descripcion, $importancia, $idJuego);
         header("Location: index.php");

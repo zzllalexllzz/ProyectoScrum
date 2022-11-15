@@ -1,7 +1,6 @@
 <?php
-
-    include('lib.php');
     include('cabecera.php');
+    include('lib.php');
     include_once('modelo.php');
     
 ?>
