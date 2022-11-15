@@ -1,6 +1,6 @@
 <?php
 
-    
+        
     function conexionBD() {
         $dbh = null;
 
@@ -27,8 +27,8 @@
         }
 
         return $dbh;
-    }
-    */
+    }*/
+    
     
     /**
      * Comprobar si el juego existe 

@@ -40,6 +40,8 @@
         <?php
         $juegos = getJuegos();
         pintarJuegos($juegos);
+
+        
         ?>
       </div>
     </li>

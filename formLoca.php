@@ -25,10 +25,10 @@ if (isset($_GET['accion'])) {
                         </div>
                         <div class='form-group'>
                             <label for='importancia'>Importancia:</label>
-                            <select name='importancia' class='form-control form-control-user '>
-                                <option value='1'>Uno</option>
-                                <option value='2'>Dos</option>
-                                <option value='3'>Tres</option>
+                            <select name='importancia' class='form-control form-control-user text-white'>
+                                <option class='text-dark' value='1'>Uno</option>
+                                <option class='text-dark' value='2'>Dos</option>
+                                <option class='text-dark' value='3'>Tres</option>
                             </select>
                         </div>
                         <div class='form-group'>

@@ -11,7 +11,7 @@ function filtrado($datos){
 
 function pintarJuegos($juegos)
 {
-    echo"<h1 class='titulo text-center'>JUEGOS</h1>";
+    echo"<h1 class='text-center'>JUEGOS</h1>";
     echo "<table class='table table-success table-striped'>";
     echo "<thead>";
     echo "<tr>";
@@ -60,7 +60,7 @@ function pintarJuegos($juegos)
 
 function pintarLocalizaciones($localizaciones)
 {
-    echo"<h1 class='titulo text-center'>LOCALIZACIONES</h1>";
+    echo"<h1 class='text-center'>LOCALIZACIONES</h1>";
     echo "<table class='table table-success table-striped'>";
         echo "<thead>";
             echo "<tr>";
