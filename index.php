@@ -16,7 +16,6 @@
             <p class="mb-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas autem corporis! Dolorum sint doloribus, earum nihil, officiis, quidem ipsum voluptatum id rerum ducimus sequi vero nisi minima fugit facere!
               Fugiat, officiis amet labore ullam in veritatis. Quasi molestias facilis beatae quia nobis. A ab saepe, fugit dolores voluptas nisi esse sint aliquid adipisci sed porro possimus repellat, sunt eos!
-              Assumenda ducimus repudiandae veniam necessitatibus sed facere sunt voluptas praesentium esse numquam, mollitia pariatur ratione labore voluptatibus, perferendis fugiat laudantium eum vel aliquam, sint aperiam. Sint dolore perspiciatis qui tempore.
           </div>
           <div class="intro-right">
             <img src="img/home-img-1.jpg" alt="Image" class="img-fluid intro-img-1">
