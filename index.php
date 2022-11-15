@@ -13,8 +13,7 @@
           <div class="intro-left tm-bg-dark">
             <h2 class="mb-4">Bienvenido a Game Tool</h2>
             <p class="mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas autem corporis! Dolorum sint doloribus, earum nihil, officiis, quidem ipsum voluptatum id rerum ducimus sequi vero nisi minima fugit facere!
-              Fugiat, officiis amet labore ullam in veritatis. Quasi molestias facilis beatae quia nobis. A ab saepe, fugit dolores voluptas nisi esse sint aliquid adipisci sed porro possimus repellat, sunt eos!
+            Game Tools es otra aplicación relacionada, aunque no se puede iniciar por sí misma, necesita ser lanzada desde Game Launcher. Para usar Game Tools necesitas activar su casilla dentro de Game Launcher y abrir un juego desde el mismo. Al hacerlo, obtendrás un botón flotante que te proporciona opciones muy interesantes mientras estás jugando.
           </div>
           <div class="intro-right">
             <img src="img/home-img-1.jpg" alt="Image" class="img-fluid intro-img-1">
@@ -41,7 +40,7 @@
         $juegos = getJuegos();
         pintarJuegos($juegos);
 
-        
+
         ?>
       </div>
     </li>
