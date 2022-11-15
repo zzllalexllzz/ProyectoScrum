@@ -16,12 +16,12 @@ if (isset($_GET['accion'])) {
     // Eliminar juego
     if ($_GET['accion'] == 'borrar') {
         borrarJuego($_GET['id']);
-            header("Location: index.php");
+            header("Location: index.php?juegos");
     }
     // Eliminar localizacion
     if ($_GET['accion'] == 'borrarL') {
         borrarLocalizacion($_GET['id']);
-            header("Location: index.php");
+            header("Location: index.php?juegos");
     } 
     
 }

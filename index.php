@@ -4,6 +4,13 @@
     include_once('modelo.php');
     
 ?>
+<?php
+if(isset($_GET['juegos'])){
+  $juegos = getJuegos();
+  pintarJuegos($juegos);
+}else{
+  
+?>
 
 <div class="container-fluid tm-content-container">
   <ul class="cd-hero-slider mb-0 py-5">
@@ -48,5 +55,6 @@
 </div>
 
 <?php
+}
     include("pie.php");
 ?>
