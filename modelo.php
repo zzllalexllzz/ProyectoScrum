@@ -1,6 +1,6 @@
 <?php
 
-    
+    //metodo que conecta a la base de datos del heroku
     function conexionBD() {
         $dbh = null;
 

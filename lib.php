@@ -8,7 +8,7 @@ function filtrado($datos){
     return $datos;
 }
 
-
+// pinta la tabla de juegos con sus accionones o botones determinados
 function pintarJuegos($juegos)
 {
     echo"<h1 class='text-center'>JUEGOS</h1>";
@@ -55,9 +55,7 @@ function pintarJuegos($juegos)
     echo "</table>";
 }
 
-
-
-
+// pinta las localizaciones del un juego determinado
 function pintarLocalizaciones($localizaciones)
 {
     echo"<h1 class='text-center'>LOCALIZACIONES</h1>";

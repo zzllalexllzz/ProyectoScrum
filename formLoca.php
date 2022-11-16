@@ -3,6 +3,7 @@ include_once('lib.php');
 include_once('cabecera.php');
 include_once('modelo.php');
 
+//llama al modal dando el id del juego al que pertenece o alque añadimoss
 if (isset($_GET['accion'])) {
 
     if ($_GET['accion'] == "insertar") {

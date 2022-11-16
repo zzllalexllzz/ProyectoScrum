@@ -11,7 +11,7 @@ if(isset($_GET['juegos'])){
 }else{
   
 ?>
-
+//pagina de inicio
 <div class="container-fluid tm-content-container">
   <ul class="cd-hero-slider mb-0 py-5">
     <li class="px-3" data-page-no="1">
@@ -45,7 +45,7 @@ if(isset($_GET['juegos'])){
         <div class="circle intro-circle-2"></div>
         <?php
         $juegos = getJuegos();
-        pintarJuegos($juegos);
+        pintarJuegos($juegos);//pinta los juegos
 
 
         ?>
